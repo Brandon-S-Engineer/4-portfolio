@@ -12,7 +12,8 @@ interface Props {
   index: number;
 }
 
-const SkillDataProvider = ({ src, width, height, index }: Props) => {
+// const SkillDataProvider = ({ src, width, height, index }: Props) => {
+const SkillDataProvider = ({ src = '', width = 100, height = 100, index = 0 }: Props) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -26,6 +27,7 @@ const SkillDataProvider = ({ src, width, height, index }: Props) => {
 
   return (
     <motion.div
+      data-testid='motion-container' //? Testing
       ref={ref} // Associates the DOM element with the ref provided by useInView, enabling it to monitor the element's presence within the viewport.
       initial='hidden'
       variants={imageVariants}
