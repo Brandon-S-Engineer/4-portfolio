@@ -20,7 +20,11 @@ const ProjectCardRight = ({ src, title, description, isDark }: Props) => {
           height={500}
           className='object-contain'
         />
-        {isDark && <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-30'></div>}
+        {isDark && (
+          <div
+            data-testid='dark-overlay' // Testing
+            className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-30'></div>
+        )}
       </div>
 
       {/* Text Section */}
