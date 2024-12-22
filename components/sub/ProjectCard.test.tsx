@@ -38,15 +38,19 @@ describe('ProjectCard Component', () => {
         isDark={true}
       />
     );
-    const overlay = screen.getByText('Test Project').closest('div')?.querySelector('div > div');
-    expect(overlay).toBeInTheDocument();
+
+    // Locate the overlay using a query for its unique class
+    const overlay = screen.getByAltText('Test Project').closest('div')?.querySelector('.bg-black.bg-opacity-30');
+
+    // Ensure the overlay exists
+    expect(overlay).not.toBeNull();
     expect(overlay).toHaveClass('absolute top-0 left-0 w-full h-full bg-black bg-opacity-30');
   });
 
   it('does not render the dark overlay when isDark is false', () => {
     render(<ProjectCard {...mockProps} />);
     const overlay = screen.getByText('Test Project').closest('div')?.querySelector('div > div');
-    expect(overlay).not.toHaveClass('bg-black bg-opacity-30');
+    expect(overlay).toBeNull(); // Ensure the overlay does not exist
   });
 
   it('passes correct props to the Image component', () => {
