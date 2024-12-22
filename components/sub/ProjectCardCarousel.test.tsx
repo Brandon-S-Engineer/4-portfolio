@@ -45,11 +45,15 @@ describe('ProjectCardCarousel Component', () => {
     expect(overlay).toHaveClass('absolute top-0 left-0 w-full h-full bg-black bg-opacity-30');
   });
 
-  it('updates to the next image when the "next" button is clicked', () => {
+  it('updates to the next image when the "next" button is clicked', async () => {
     render(<ProjectCardCarousel {...mockProps} />);
     const nextButton = screen.getByText('▶');
-    fireEvent.click(nextButton);
-    expect(screen.getByAltText('Image 2')).toBeInTheDocument();
+
+    fireEvent.click(nextButton); // Simulate clicking the "next" button
+
+    // Wait for the next image to appear
+    const nextImage = await screen.findByAltText('Image 2'); // Automatically waits for updates
+    expect(nextImage).toBeInTheDocument();
   });
 
   it('updates to the previous image when the "prev" button is clicked', () => {
@@ -61,11 +65,14 @@ describe('ProjectCardCarousel Component', () => {
     expect(screen.getByAltText('Image 1')).toBeInTheDocument();
   });
 
-  it('updates the current image when a pagination dot is clicked', () => {
+  it('updates the current image when a pagination dot is clicked', async () => {
     render(<ProjectCardCarousel {...mockProps} />);
     const dotButton = screen.getByLabelText('Go to image 2');
     fireEvent.click(dotButton);
-    expect(screen.getByAltText('Image 2')).toBeInTheDocument();
+
+    // Wait for the animation to complete and the new image to appear
+    const newImage = await screen.findByAltText('Image 2'); // Automatically waits for updates
+    expect(newImage).toBeInTheDocument();
   });
 
   it('renders a placeholder or nothing during SSR (when windowWidth is null)', () => {

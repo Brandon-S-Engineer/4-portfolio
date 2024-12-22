@@ -86,7 +86,11 @@ const ProjectCardCarousel = ({ images, title, technologies, description, isDark 
             className='object-cover w-full h-full'
           />
         </div>
-        {isDark && <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-30'></div>}
+        {isDark && (
+          <div
+            data-testid='dark-overlay' //? Testing
+            className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-30'></div>
+        )}
 
         {/* Carousel Navigation */}
         <button

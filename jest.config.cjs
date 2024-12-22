@@ -14,7 +14,6 @@ const customJestConfig = {
     '\\.(css|scss)$': 'identity-obj-proxy', // Mocks CSS/SCSS imports
     '^@/components/(.*)$': '<rootDir>/components/$1', // Maps module aliases
   },
-  collectCoverage: true, // Collect code coverage
   coverageDirectory: 'coverage', // Directory for coverage reports
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}', // Include source files
