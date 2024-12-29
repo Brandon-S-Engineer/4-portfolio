@@ -58,6 +58,8 @@ const Projects = () => {
           { src: '/4-portfolio/1.png', alt: 'Description' },
           { src: '/4-portfolio/2.png', alt: 'Description' },
           { src: '/4-portfolio/3.png', alt: 'Description' },
+          { src: '/4-portfolio/4.png', alt: 'Description' },
+          { src: '/4-portfolio/5.png', alt: 'Description' },
         ]}
         title='Portfolio'
         technologies='TypeScript, NextJS'
