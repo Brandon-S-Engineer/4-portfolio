@@ -67,7 +67,19 @@ const Projects = () => {
       <ProjectCardCarousel
         images={[
           { src: '/5-eCommerce/1.png', alt: 'Description' },
-          { src: '/5-eCommerce/1.png', alt: 'Description' },
+          { src: '/5-eCommerce/2.png', alt: 'Description' },
+          { src: '/5-eCommerce/3.png', alt: 'Description' },
+          { src: '/5-eCommerce/4.png', alt: 'Description' },
+          { src: '/5-eCommerce/5.png', alt: 'Description' },
+          { src: '/5-eCommerce/6.png', alt: 'Description' },
+          { src: '/5-eCommerce/7.png', alt: 'Description' },
+          { src: '/5-eCommerce/8.png', alt: 'Description' },
+          { src: '/5-eCommerce/9.png', alt: 'Description' },
+          { src: '/5-eCommerce/10.png', alt: 'Description' },
+          { src: '/5-eCommerce/11.png', alt: 'Description' },
+          { src: '/5-eCommerce/12.png', alt: 'Description' },
+          { src: '/5-eCommerce/13.png', alt: 'Description' },
+          { src: '/5-eCommerce/14.png', alt: 'Description' },
         ]}
         title='eCommerce & Admin Panel'
         technologies='Tailwind, ShadCN, TypeScript, NextJS, MERN, Stripe'

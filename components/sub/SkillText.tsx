@@ -83,7 +83,7 @@ const SkillText = () => {
         <motion.div
           variants={slideInFromTop}
           className='Secondary-box font-bold py-[0.5px] px-[8px] border border-[#42ddf85e] mb-[6px]'>
-          <h1 className='Secondary-text text-[16px] text-[#42ddf8a6]'>React Testing</h1>
+          <h1 className='Secondary-text text-[16px] text-[#42ddf8a6]'>React Testing Library</h1>
         </motion.div>
 
         <motion.div

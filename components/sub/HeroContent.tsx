@@ -31,7 +31,7 @@ const HeroContent = () => {
           variants={slideInFromTop}
           className='Welcome-box font-bold py-[8px] px-[9px] border border-[#7042f88b] opacity-[0.9]'>
           <SparklesIcon className='text-[#b49bff] mr-[10px] h-5 w-5'></SparklesIcon>
-          <h1 className='text-white text-[26px]'>Font-End Software Engineer</h1>
+          <h1 className='text-white text-[26px]'>Front-End Software Engineer</h1>
         </motion.div>
 
         <motion.div
@@ -47,8 +47,7 @@ const HeroContent = () => {
         <motion.p
           variants={slideInFromLeft(0.8)}
           className='text-lg text-blue-100 my-5 max-w-[600px]'>
-          I'm Brandon Israel Hurtado Soria, a Front-End Developer specializing in building responsive and user-friendly web applications with modern technologies like React, Next.js, and TypeScript. <br /> <br /> My passion for learning and adaptability allows me to tackle new challenges and
-          continuously refine my expertise to meet project needs while embracing every opportunity to study and grow my skill set.
+          I'm Brandon Israel Hurtado Soria, a Front-End Developer specializing in building responsive and user-friendly web applications with modern technologies like React, Next.js, and TypeScript. <br />
         </motion.p>
 
         <div className='flex justify-start space-x-4'>
