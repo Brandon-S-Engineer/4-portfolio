@@ -20,7 +20,6 @@ const Projects = () => {
           { src: '/1-restaurant/6.png', alt: 'Description' },
           { src: '/1-restaurant/7.png', alt: 'Description' },
           { src: '/1-restaurant/8.png', alt: 'Description' },
-          { src: '/1-restaurant/9.png', alt: 'Description' },
         ]}
         title='Restaurant'
         technologies='JavaScript, SCSS, Animations.'
