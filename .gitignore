@@ -6,6 +6,7 @@ node_modules/
 
 dist/
 
+# I case we need to upload larger files
 # public/
 
 .swc/
