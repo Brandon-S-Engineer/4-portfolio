@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import HeroContent from './HeroContent';
 import '@testing-library/jest-dom';
 
-// Mocking next/image to simplify rendering with custom attributes
+// Mocking next/image for simplicity
 jest.mock('next/image', () => (props: any) => {
   const { src, alt, height, width } = props;
   return (
@@ -20,9 +20,7 @@ jest.mock('next/image', () => (props: any) => {
 beforeEach(() => {
   document.body.innerHTML = '<div id="footer"></div>';
   jest.useFakeTimers();
-
-  // Mock scrollIntoView to prevent errors
-  Element.prototype.scrollIntoView = jest.fn();
+  Element.prototype.scrollIntoView = jest.fn(); // Mock scrollIntoView to prevent errors
 });
 
 afterEach(() => {
@@ -34,18 +32,13 @@ describe('HeroContent Component', () => {
   it('renders without crashing', () => {
     render(<HeroContent />);
 
-    // Check for individual text parts since the text is split across elements
-    const dynamicPart = screen.getByText('Dynamic and Adaptative', { exact: false });
-    expect(dynamicPart).toBeInTheDocument();
+    // Use partial matchers for dynamic text
+    expect(screen.getByText(/Front-End Software Engineer/i)).toBeInTheDocument();
+    expect(screen.getByText(/Dynamic and Adaptative/i)).toBeInTheDocument();
+    expect(screen.getByText(/Creating/i)).toBeInTheDocument();
+    expect(screen.getByText(/Front-End Solutions/i)).toBeInTheDocument();
 
-    const creatingPart = screen.getByText('Creating', { exact: false });
-    expect(creatingPart).toBeInTheDocument();
-
-    const frontEndSolutionsPart = screen.getByText('Front-End Solutions', { exact: false });
-    expect(frontEndSolutionsPart).toBeInTheDocument();
-
-    // Verify other elements
-    expect(screen.getByText('Font-End Software Engineer')).toBeInTheDocument();
+    // Verify additional elements
     expect(screen.getByText(/I'm Brandon Israel Hurtado Soria/i)).toBeInTheDocument();
     expect(screen.getByAltText('work icons')).toBeInTheDocument();
   });
@@ -82,11 +75,13 @@ describe('HeroContent Component', () => {
   it('includes motion props on key elements', () => {
     render(<HeroContent />);
 
-    // Ensure key motion elements are rendered
-    const welcomeBox = screen.getByText('Font-End Software Engineer').closest('div');
+    // Check for the welcome box motion container
+    const welcomeBox = screen.getByText(/Front-End Software Engineer/i).closest('div');
     expect(welcomeBox).toBeInTheDocument();
+    expect(welcomeBox).toHaveClass('Welcome-box');
 
-    const mainContainer = welcomeBox?.closest('.flex'); // Locate the motion container
+    // Ensure the motion container is rendered
+    const mainContainer = welcomeBox?.closest('.flex');
     expect(mainContainer).toBeInTheDocument();
   });
 

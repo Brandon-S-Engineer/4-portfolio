@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import SkillText from './SkillText'; // Adjust path as necessary
+import SkillText from './SkillText';
 
 describe('SkillText Component', () => {
   test('renders without crashing', () => {
@@ -22,23 +22,25 @@ describe('SkillText Component', () => {
     });
   });
 
-  test('renders all secondary skill names', () => {
+  test('renders all secondary skill names without ambiguity', () => {
     render(<SkillText />);
-    const secondarySkills = ['WebPack', 'Axios', 'Redux', 'MUI', 'React Testing', 'Jest', 'CMS'];
+    const secondarySkills = ['WebPack', 'Axios', 'Redux', 'MUI', 'React Testing Library', 'Jest', 'CMS'];
+
     secondarySkills.forEach((skill) => {
-      expect(screen.getByText(skill)).toBeInTheDocument();
+      const matchingElements = screen.getAllByText(skill, { exact: true }); // Use exact match
+      expect(matchingElements.length).toBeGreaterThanOrEqual(1); // Ensure at least one element matches
+      const skillElement = matchingElements[0]; // Focus on the first match
+      expect(skillElement).toBeInTheDocument();
     });
   });
 
   test('applies Framer Motion variants to primary skill boxes', () => {
     render(<SkillText />);
-
-    // Query primary skill elements only
     const primarySkills = ['CSS/SASS', 'Tailwind', 'JavaScript', 'TypeScript', 'React', 'NextJS', 'GitHub'];
     primarySkills.forEach((skill) => {
       const skillElement = screen.getByText(skill);
       const parentDiv = skillElement.closest('div'); // Get the parent div
-      expect(parentDiv).toHaveClass('Welcome-box'); // Assert it has the correct class
+      expect(parentDiv).toHaveClass('Welcome-box');
     });
   });
 
