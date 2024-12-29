@@ -38,20 +38,37 @@ const ProjectCardCarousel = ({ images, title, technologies, description, isDark 
     };
   }, []);
 
+  // const handlePrevClick = () => {
+  //   setFade(false);
+  //   setTimeout(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  //     setFade(true);
+  //   }, 262);
+  // };
+
+  // const handleNextClick = () => {
+  //   setFade(false);
+  //   setTimeout(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  //     setFade(true);
+  //   }, 262);
+  // };
+
+  const preloadImage = (index: number) => {
+    const image = new window.Image(); // Explicitly use window.Image
+    image.src = images[index].src;
+  };
+
   const handlePrevClick = () => {
-    setFade(false); // Start fading out
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-      setFade(true); // Fade in after the index changes
-    }, 262); // Animation duration
+    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+    preloadImage(newIndex);
+    setCurrentIndex(newIndex);
   };
 
   const handleNextClick = () => {
-    setFade(false);
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-      setFade(true);
-    }, 262);
+    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    preloadImage(newIndex);
+    setCurrentIndex(newIndex);
   };
 
   const handleDotClick = (index: number) => {
@@ -84,6 +101,7 @@ const ProjectCardCarousel = ({ images, title, technologies, description, isDark 
             width={630}
             height={630}
             className='object-cover w-full h-full'
+            loading='eager'
           />
         </div>
         {isDark && (
