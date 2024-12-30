@@ -36,7 +36,7 @@ const Projects = () => {
           { src: '/2-ai-generator/3.png', alt: 'Description' },
         ]}
         title='Image Generator AI'
-        webLink='https://2-ai-image-web-brandon-i-sorias-projects.vercel.app/'
+        webLink='https://2-ai-image-web.vercel.app/'
         repoLink='https://github.com/Brandon-S-Engineer/2-ai-image-web'
         technologies='Tailwind, React, API, MERN'
         description={formattedDescription2}
