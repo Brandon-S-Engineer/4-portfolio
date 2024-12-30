@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import { RxExternalLink } from 'react-icons/rx';
+import { RxExternalLink, RxGithubLogo } from 'react-icons/rx';
 
 interface Props {
   images: { src: string; alt: string }[];
@@ -10,9 +10,11 @@ interface Props {
   technologies: string;
   description: any;
   isDark?: boolean;
+  webLink: string;
+  repoLink: string;
 }
 
-const ProjectCardCarousel = ({ images, title, technologies, description, isDark }: Props) => {
+const ProjectCardCarousel = ({ images, title, technologies, description, isDark, webLink, repoLink }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true); // State to control fade animation
   // const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
@@ -141,7 +143,27 @@ const ProjectCardCarousel = ({ images, title, technologies, description, isDark 
         {/* Title */}
         <h1 className='text-2xl font-semibold text-white text-center flex items-center justify-center space-x-1'>
           {title}
-          <RxExternalLink className='ml-1 ' />
+
+          {/* Link to the live website */}
+          <a
+            href={webLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='ml-1 cursor-pointer'>
+            <RxExternalLink className='hover:text-blue-500 transition-colors' />
+          </a>
+
+          {/* Link to the GitHub repository */}
+          <a
+            href={repoLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='ml-1 cursor-pointer'>
+            <RxGithubLogo className='hover:text-blue-500 transition-colors' />
+          </a>
+
+          {/* <RxExternalLink className='ml-1' />
+          <RxGithubLogo className='ml-1' /> */}
         </h1>
         {/* Technologies Stack */}
         <p className='text-gray-300 mb-2 text-left'>{technologies}</p>

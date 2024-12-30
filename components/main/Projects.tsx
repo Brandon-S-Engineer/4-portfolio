@@ -22,6 +22,9 @@ const Projects = () => {
           { src: '/1-restaurant/8.png', alt: 'Description' },
         ]}
         title='Restaurant'
+        // https://1-restaurant-iyihdt55l-brandon-i-sorias-projects.vercel.app/
+        webLink='https://1-restaurant.vercel.app/'
+        repoLink='https://github.com/Brandon-S-Engineer/1-restaurant'
         technologies='JavaScript, SCSS, Animations.'
         description={formattedDescription1}
       />
@@ -33,6 +36,8 @@ const Projects = () => {
           { src: '/2-ai-generator/3.png', alt: 'Description' },
         ]}
         title='Image Generator AI'
+        webLink=''
+        repoLink='https://github.com/Brandon-S-Engineer/2-ai-image-web'
         technologies='Tailwind, React, API, MERN'
         description={formattedDescription2}
         isDark
@@ -47,6 +52,8 @@ const Projects = () => {
           { src: '/3-social-media/5.png', alt: 'Description' },
         ]}
         title='Social Media'
+        webLink=''
+        repoLink='https://github.com/Brandon-S-Engineer/3-social-media'
         technologies='MUI, React, MERN'
         description={formattedDescription3}
         isDark
@@ -61,6 +68,8 @@ const Projects = () => {
           { src: '/4-portfolio/5.png', alt: 'Description' },
         ]}
         title='Portfolio'
+        webLink='https://brandon-s-engineer.com/'
+        repoLink='https://github.com/Brandon-S-Engineer/4-portfolio'
         technologies='TypeScript, NextJS'
         description={formattedDescription4}
       />
@@ -83,6 +92,8 @@ const Projects = () => {
           { src: '/5-eCommerce/14.png', alt: 'Description' },
         ]}
         title='eCommerce & Admin Panel'
+        webLink=''
+        repoLink='https://github.com/Brandon-S-Engineer/ecommerce-frontend'
         technologies='Tailwind, ShadCN, TypeScript, NextJS, MERN, Stripe'
         description={formattedDescription5}
         isDark
