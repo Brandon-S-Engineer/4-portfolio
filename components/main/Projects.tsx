@@ -92,7 +92,7 @@ const Projects = () => {
           { src: '/5-eCommerce/14.png', alt: 'Description' },
         ]}
         title='eCommerce & Admin Panel'
-        webLink=''
+        webLink='https://ecommerce-frontend-tau-one.vercel.app/'
         repoLink='https://github.com/Brandon-S-Engineer/ecommerce-frontend'
         technologies='Tailwind, ShadCN, TypeScript, NextJS, MERN, Stripe'
         description={formattedDescription5}
