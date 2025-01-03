@@ -22,7 +22,6 @@ const Projects = () => {
           { src: '/1-restaurant/8.png', alt: 'Description' },
         ]}
         title='Restaurant'
-        // https://1-restaurant-iyihdt55l-brandon-i-sorias-projects.vercel.app/
         webLink='https://1-restaurant.vercel.app/'
         repoLink='https://github.com/Brandon-S-Engineer/1-restaurant'
         technologies='JavaScript, SCSS, Animations.'
@@ -52,7 +51,7 @@ const Projects = () => {
           { src: '/3-social-media/5.png', alt: 'Description' },
         ]}
         title='Social Media'
-        webLink=''
+        webLink='https://3-social-media-z7ma.vercel.app/'
         repoLink='https://github.com/Brandon-S-Engineer/3-social-media'
         technologies='MUI, React, MERN'
         description={formattedDescription3}
