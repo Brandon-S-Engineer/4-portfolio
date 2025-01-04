@@ -54,7 +54,7 @@ const Footer = () => {
               <div className='flex flex-row items-center mt-[15px]'>
                 {/* LinkedIn */}
                 <a
-                  href='https://www.linkedin.com/in/brandon-soria-207266294/'
+                  href='https://www.linkedin.com/in/brandon-i-soria/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='flex flex-row items-center mx-[15px] cursor-pointer'>
@@ -64,8 +64,8 @@ const Footer = () => {
 
                 {/* Resume */}
                 <a
-                  href=''
-                  target='_blank'
+                  download
+                  href='/0-resume/Resume-Brandon-I-Soria.pdf'
                   rel='noopener noreferrer'
                   className='flex flex-row items-center mx-[15px] cursor-pointer'>
                   <RxIdCard />
@@ -79,7 +79,7 @@ const Footer = () => {
             <div className='min-w-[200px] h-auto flex flex-col items-center justify-start'>
               <div className='font-bold text-[16px] mb-[10px]'>GitHub Repository</div>
               <a
-                href='https://github.com/Bran-Eng?tab=repositories'
+                href='https://github.com/Brandon-S-Engineer?tab=repositories'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='flex flex-row items-center my-[15px] cursor-pointer'>
