@@ -47,35 +47,35 @@ const Navbar = () => {
           <div className='flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#03001480] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200'>
             <a
               onClick={() => handleNavbarClick('hero')}
-              className='cursor-pointer'>
+              className='cursor-pointer hover:text-blue-500 transition-colors'>
               About me
             </a>
 
             <a
               onClick={() => handleNavbarClick('skills')}
-              className='cursor-pointer'>
+              className='cursor-pointer hover:text-blue-500 transition-colors'>
               Skills
             </a>
 
             {/* <a
-              className='cursor-pointer'>
+              className='cursor-pointer hover:text-blue-500 transition-colors'>
               Certifications
             </a> */}
 
             <a
               onClick={() => handleNavbarClick('ai-proficencies')}
-              className='cursor-pointer'>
+              className='cursor-pointer hover:text-blue-500 transition-colors'>
               AI Knowledge
             </a>
 
             <a
               onClick={() => handleNavbarClick('projects')}
-              className='cursor-pointer'>
+              className='cursor-pointer hover:text-blue-500 transition-colors'>
               Website Showcase
             </a>
 
             <a
-              className='cursor-pointer'
+              className='cursor-pointer hover:text-blue-500 transition-colors'
               onClick={handleContactClick}>
               Contact
             </a>
@@ -86,9 +86,10 @@ const Navbar = () => {
           <a
             href='https://github.com/Brandon-S-Engineer?tab=repositories'
             target='_blank'
-            rel='noopener noreferrer'>
+            rel='noopener noreferrer'
+            className='text-white hover:text-blue-500 transition-colors'>
             <RxGithubLogo
-              color='white'
+              // color='white'
               className='text-[15px] size-8'
             />
           </a>
@@ -96,31 +97,25 @@ const Navbar = () => {
           <a
             href='https://www.linkedin.com/in/brandon-i-soria/'
             target='_blank'
-            rel='noopener noreferrer'>
-            <RxLinkedinLogo
-              color='white'
-              className='text-[15px] size-8'
-            />
+            rel='noopener noreferrer'
+            className='text-white hover:text-blue-500 transition-colors'>
+            <RxLinkedinLogo className='text-[15px] size-8' />
           </a>
 
           <a
             href='mailto:brandon.s.engineer@gmail.com'
             target='_blank'
-            rel='noopener noreferrer'>
-            <RxEnvelopeClosed
-              color='white'
-              className='text-[15px] size-8'
-            />
+            rel='noopener noreferrer'
+            className='text-white hover:text-blue-500 transition-colors'>
+            <RxEnvelopeClosed className='text-[15px] size-8' />
           </a>
 
           <a
             href='/0-resume/Resume-Brandon-I-Soria.pdf'
             target='_blank'
-            rel='noopener noreferrer'>
-            <RxIdCard
-              color='white'
-              className='text-[15px] size-8'
-            />
+            rel='noopener noreferrer'
+            className='text-white hover:text-blue-500 transition-colors'>
+            <RxIdCard className='text-[15px] size-8' />
           </a>
         </div>
       </div>

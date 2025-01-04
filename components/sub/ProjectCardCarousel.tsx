@@ -30,31 +30,12 @@ const ProjectCardCarousel = ({ images, title, technologies, description, isDark,
       window.addEventListener('resize', handleResize);
     }
 
-    // window.addEventListener('resize', handleResize);
-    // return () => window.removeEventListener('resize', handleResize);
-
     return () => {
       if (typeof window !== 'undefined') {
         window.removeEventListener('resize', handleResize);
       }
     };
   }, []);
-
-  // const handlePrevClick = () => {
-  //   setFade(false);
-  //   setTimeout(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-  //     setFade(true);
-  //   }, 262);
-  // };
-
-  // const handleNextClick = () => {
-  //   setFade(false);
-  //   setTimeout(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-  //     setFade(true);
-  //   }, 262);
-  // };
 
   const preloadImage = (index: number) => {
     const image = new window.Image(); // Explicitly use window.Image
