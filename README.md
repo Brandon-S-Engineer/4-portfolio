@@ -7,7 +7,7 @@
 
 ## 🌐 Online Demo
 
-**[Live Demo](#)**  
+**[Live Demo](https://www.brandon-s-engineer.com/)**  
 Explore the interactive portfolio, view showcased projects, download the resume, and experience the dynamic motion background.
 
 ---
@@ -121,4 +121,4 @@ Explore the interactive portfolio, view showcased projects, download the resume,
 
 - **Email**: [brandon.s.engineer@gmail.com](mailto:brandon.s.engineer@gmail.com)
 - **LinkedIn**: [Brandon I. Soria](https://www.linkedin.com/in/brandon-i-soria/)
-- **Portfolio**: [Link to Portfolio](#)
+- **Portfolio**: [Link to Portfolio](https://www.brandon-s-engineer.com/)
