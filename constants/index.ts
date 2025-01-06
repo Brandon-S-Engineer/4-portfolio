@@ -282,8 +282,8 @@ export const Piramid_Two = [
     height: 80,
   },
   {
-    skill_name: 'Framer Motion',
-    Image: '/framer.png',
+    skill_name: 'Jest',
+    Image: '/jest.png',
     width: 80,
     height: 80,
   },
