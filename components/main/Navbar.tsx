@@ -84,7 +84,7 @@ const Navbar = () => {
 
         <div className='flex flex-row gap-5'>
           <a
-            href='https://github.com/Brandon-S-Engineer?tab=repositories'
+            href='https://github.com/Brandon-S-Engineer?tab=repositories&q=&type=&language=&sort=name'
             target='_blank'
             rel='noopener noreferrer'
             className='text-white hover:text-blue-500 transition-colors'>

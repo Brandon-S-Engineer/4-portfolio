@@ -77,7 +77,7 @@ const Footer = () => {
             <div className='min-w-[200px] h-auto flex flex-col items-center justify-start'>
               <div className='font-bold text-[16px] mb-[10px]'>GitHub Repository</div>
               <a
-                href='https://github.com/Brandon-S-Engineer?tab=repositories'
+                href='https://github.com/Brandon-S-Engineer?tab=repositories&q=&type=&language=&sort=name'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='flex flex-row items-center my-[15px] cursor-pointer text-white hover:text-blue-500 transition-colors'>
