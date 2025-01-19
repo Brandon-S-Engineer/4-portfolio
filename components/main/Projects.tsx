@@ -6,7 +6,7 @@ import { formattedDescription1, formattedDescription2, formattedDescription3, fo
 const Projects = () => {
   return (
     <div
-      className='flex flex-col items-center justify-center py-10'
+      className='flex flex-col items-center justify-center py-10 z-40'
       id='projects'>
       <h1 className='text-[70px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-6'>Website Showcase</h1>
 

@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center'>
+    <div className='flex flex-col items-center justify-center z-40'>
       <h1 className='text-[70px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-1'>Contact</h1>
 
       <div
@@ -27,14 +27,13 @@ const Footer = () => {
             <div className='min-w-[200px] h-auto flex flex-col items-center justify-start'>
               <div className='font-bold text-[16px] mb-[10px]'>Email</div>
               <div className='flex flex-row items-center my-[15px] cursor-pointer relative'>
-                <a className='flex flex-row items-center text-[15px] ml-[6px] text-white hover:text-blue-500 transition-colors'>
+                <a
+                  className='flex flex-row items-center text-[15px] ml-[6px] text-white hover:text-blue-500 transition-colors'
+                  onClick={handleCopy}>
                   <RxEnvelopeClosed />
                   <span className='text-[15px] ml-[6px]'>brandon.s.engineer@gmail.com</span>
 
-                  <FaCopy
-                    className='ml-[6px] text-[15px] cursor-pointer'
-                    onClick={handleCopy} // Attach the click handler
-                  />
+                  <FaCopy className='ml-[6px] text-[15px] cursor-pointer' />
                 </a>
 
                 {copied && (

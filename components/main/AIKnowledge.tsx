@@ -5,7 +5,7 @@ import ProjectCardRight from '../sub/ProjectCardRight';
 const AIKnowledge = () => {
   return (
     <div
-      className='flex flex-col items-center justify-center py-10'
+      className='flex flex-col items-center justify-center py-10 z-40'
       id='ai-proficencies'>
       <h1 className='text-[70px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-3'>AI Proficencies</h1>
       <ProjectCardRight
