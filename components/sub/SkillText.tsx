@@ -12,44 +12,44 @@ const SkillText = () => {
       <div className='flex items-center space-x-4'>
         <motion.div
           variants={slideInFromTop}
-          className='Welcome-box font-bold py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
-          <h1 className='Welcome-text text-[25px]'>CSS/SASS</h1>
+          className='Welcome-box font-bold md:py-[5px] lg:py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
+          <h1 className='Welcome-text md:text-[16px] lg:text-[25px]'>CSS/SASS</h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromTop}
-          className='Welcome-box font-bold py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
-          <h1 className='Welcome-text text-[25px]'>Tailwind</h1>
+          className='Welcome-box font-bold md:py-[5px] lg:py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
+          <h1 className='Welcome-text md:text-[16px] lg:text-[25px]'>Tailwind</h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromTop}
-          className='Welcome-box font-bold py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
-          <h1 className='Welcome-text text-[25px]'>JavaScript</h1>
+          className='Welcome-box font-bold md:py-[5px] lg:py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
+          <h1 className='Welcome-text md:text-[16px] lg:text-[25px]'>JavaScript</h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromTop}
-          className='Welcome-box font-bold py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
-          <h1 className='Welcome-text text-[25px]'>TypeScript</h1>
+          className='Welcome-box font-bold md:py-[5px] lg:py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
+          <h1 className='Welcome-text md:text-[16px] lg:text-[25px]'>TypeScript</h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromTop}
-          className='Welcome-box font-bold py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
-          <h1 className='Welcome-text text-[25px]'>React</h1>
+          className='Welcome-box font-bold md:py-[5px] lg:py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
+          <h1 className='Welcome-text md:text-[16px] lg:text-[25px]'>React</h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromTop}
-          className='Welcome-box font-bold py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
-          <h1 className='Welcome-text text-[25px]'>NextJS</h1>
+          className='Welcome-box font-bold md:py-[5px] lg:py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
+          <h1 className='Welcome-text md:text-[16px] lg:text-[25px]'>NextJS</h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromTop}
-          className='Welcome-box font-bold py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
-          <h1 className='Welcome-text text-[25px]'>GitHub</h1>
+          className='Welcome-box font-bold md:py-[5px] lg:py-[1px] px-[11px] border border-[#7042f88b] opacity-[0.9] mb-[10px]'>
+          <h1 className='Welcome-text md:text-[16px] lg:text-[25px]'>GitHub</h1>
         </motion.div>
       </div>
 

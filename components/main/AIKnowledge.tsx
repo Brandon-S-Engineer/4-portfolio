@@ -15,8 +15,8 @@ const AIKnowledge = () => {
         isDark={true}
       />
 
-      <div className='h-full w-full flex flex-col md:flex-row gap-10 px-10 mb-10  mt-2'>
-        <div className='flex-1 flex'>
+      <div className='h-full w-full flex flex-col md:flex-row gap-10 xs:px-10 lg:px-4 xl:px-10 mb-10 mt-2'>
+        <div className='flex-1 flex mr-[-25px]'>
           <ProjectCard
             src='/ChatGPT.gif'
             title='Chat GPT'
@@ -31,7 +31,7 @@ const AIKnowledge = () => {
             description='Used directly in the code editor for AI-driven code generation, interactive debugging, and in-context learning.'
           />
         </div>
-        <div className='flex-1 flex'>
+        <div className='flex-1 flex ml-[-25px]'>
           <ProjectCard
             src='/VoiceReader.gif'
             title='AI Voice Reader'

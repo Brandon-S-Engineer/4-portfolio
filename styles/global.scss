@@ -118,3 +118,8 @@ html {
   scrollbar-width: thin; /* For Firefox */
   scrollbar-color: rgba(163, 163, 163, 0.713) transparent; /* For Firefox */
 }
+
+/* Add this to your global CSS or Tailwind CSS custom layer */
+.text-stroke {
+  // -webkit-text-stroke: 1px #0d0918; /* Customize color and thickness */
+}

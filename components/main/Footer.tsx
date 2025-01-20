@@ -22,10 +22,10 @@ const Footer = () => {
         id='footer'
         className='border border-[#7042f861] rounded-full w-[90%] px-[85px] pb-[1px] mb-4 mx-auto h-full bg-transparent text-gray-200 shadow-lg p-[15px]'>
         <div className='w-full flex flex-col items-center justify-center m-auto'>
-          <div className='w-full h-full flex flex-row items-start justify-around flex-wrap'>
+          <div className='w-full h-full flex md:flex-col lg:flex-row md:items-center lg:items-start justify-around flex-wrap'>
             {/* Email */}
-            <div className='min-w-[200px] h-auto flex flex-col items-center justify-start'>
-              <div className='font-bold text-[16px] mb-[10px]'>Email</div>
+            <div className='min-w-[200px] h-auto flex flex-col items-center justify-start sm:mb-3 lg:mb-0'>
+              <div className='font-bold text-[16px] md:mb-[-15px] lg:mb-[10px]'>Email</div>
               <div className='flex flex-row items-center my-[15px] cursor-pointer relative'>
                 <a
                   className='flex flex-row items-center text-[15px] ml-[6px] text-white hover:text-blue-500 transition-colors'
@@ -46,8 +46,8 @@ const Footer = () => {
             </div>
 
             {/* Social Media */}
-            <div className='min-w-[200px] h-auto flex flex-col items-center justify-start'>
-              <div className='font-bold text-[16px] mb-[10px]'>Social Media</div>
+            <div className='min-w-[200px] h-auto flex flex-col items-center justify-start sm:mb-7 lg:mb-0'>
+              <div className='font-bold text-[16px] md:mb-[-15px] lg:mb-[10px]'>Social Media</div>
               <div className='flex flex-row items-center mt-[15px]'>
                 {/* LinkedIn */}
                 <a
@@ -74,7 +74,7 @@ const Footer = () => {
 
             {/* GitHub Repo */}
             <div className='min-w-[200px] h-auto flex flex-col items-center justify-start'>
-              <div className='font-bold text-[16px] mb-[10px]'>GitHub Repository</div>
+              <div className='font-bold text-[16px] md:mb-[-15px] lg:mb-[10px]'>GitHub Repository</div>
               <a
                 href='https://github.com/Brandon-S-Engineer?tab=repositories&q=&type=&language=&sort=name'
                 target='_blank'

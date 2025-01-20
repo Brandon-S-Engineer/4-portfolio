@@ -4,7 +4,7 @@ import HeroContent from '../sub/HeroContent';
 const Hero = () => {
   return (
     <div
-      className='relative h-full w-full flex flex-col'
+      className='relative h-full w-full flex flex-col md:top-[-45px] lg:top-[-80px] xl:top-[-80px]'
       id='hero'>
       <video
         autoPlay

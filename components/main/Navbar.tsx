@@ -37,10 +37,10 @@ const Navbar = () => {
             alt='Logo'
             width={70}
             height={70}
-            className='cursoir-pointer hover:animate-slowspin'
+            className='hidden lg:block cursoir-pointer hover:animate-slowspin'
           />
 
-          <span className='font-bold ml-[10px] hidden md:block text-gray-300'>Brandon I. Soria</span>
+          <span className='font-bold ml-[10px] hidden xl:block text-gray-300'>Brandon I. Soria</span>
         </a>
 
         <div className='w-[750px] h-full flex flex-row items-center justify-between '>
@@ -65,13 +65,13 @@ const Navbar = () => {
             <a
               onClick={() => handleNavbarClick('ai-proficencies')}
               className='cursor-pointer hover:text-blue-500 transition-colors'>
-              AI Knowledge
+              AI <span className='hidden xl:inline'>Knowledge</span>
             </a>
 
             <a
               onClick={() => handleNavbarClick('projects')}
               className='cursor-pointer hover:text-blue-500 transition-colors'>
-              Website Showcase
+              <span className='lg:hidden'>Webs</span> <span className='hidden lg:block'>Website Showcase</span>
             </a>
 
             <a
