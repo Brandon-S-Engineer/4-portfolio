@@ -26,17 +26,17 @@ const HeroContent = () => {
       initial='hidden'
       animate='visible'
       className='flex flex-row items-center justify-center lg:px-20 mt-40 w-full z-[20]'>
-      <div className='h-full w-full lg:w-[60%] flex flex-col gap-5 m-auto justify-center md:items-center lg:items-start lg:text-start md:text-center'>
+      <div className='h-full w-full lg:w-[60%] flex flex-col gap-5 m-auto justify-center items-center lg:items-start lg:text-start text-center'>
         <motion.div
           variants={slideInFromTop}
           className='Welcome-box font-bold py-[8px] px-[9px] border border-[#7042f88b] opacity-[0.9]'>
           <SparklesIcon className='text-[#b49bff] mr-[10px] h-5 w-5'></SparklesIcon>
-          <h1 className='text-white text-[26px] drop-shadow-[0_1px_1px_rgba(0,0,0,1)]'>Front-End Software Engineer</h1>
+          <h1 className='text-white text-[26px] text-smaller drop-shadow-[0_1px_1px_rgba(0,0,0,1)]'>Front-End Software Engineer</h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className='flex flex-col gap-6 mt-6 text-6xl font-bold text-white md:max-w-[700px] lg:max-w-[600px] w-auto h-auto'>
+          className='flex flex-col gap-6 mt-6 text-6xl title-text font-bold text-white md:max-w-[700px] lg:max-w-[600px] w-auto h-auto'>
           <span>
             Creating
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500'> Dynamic and Adaptative </span>
@@ -55,7 +55,7 @@ const HeroContent = () => {
             variants={slideInFromLeft(1)}
             download
             href='/0-resume/Resume-Brandon-I-Soria.pdf'
-            className='flex items-center mr-4 border border-[#7042f88b] font-semibold text-lg button-primary py-2 px-4 text-center text-white cursor-pointer rounded-lg max-w-[300px]'>
+            className='flex items-center mr-0 sm:mr-4 border border-[#7042f88b] font-semibold text-until-480 text-lg button-primary py-2 px-4 text-center text-white cursor-pointer rounded-lg max-w-[300px]'>
             Download Resume
             <RxDownload className='text-[20px] ml-[6px]' />
           </motion.a>
@@ -63,7 +63,7 @@ const HeroContent = () => {
           <motion.a
             variants={slideInFromLeft(1)}
             onClick={handleContactClick}
-            className='border border-[#7042f88b] font-semibold text-lg button-primary py-2 px-4 text-center text-white cursor-pointer rounded-lg max-w-[200px]'>
+            className='border border-[#7042f88b] font-semibold text-lg button-primary py-2 px-4 text-center text-white cursor-pointer rounded-lg max-w-[200px] text-until-480 '>
             Get in Touch
           </motion.a>
         </div>

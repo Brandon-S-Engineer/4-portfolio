@@ -23,7 +23,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
+      <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 sm:gap-10 items-center'>
         {Piramid_Three.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -35,7 +35,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
+      <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 sm:gap-10 items-center'>
         {Piramid_Two.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -47,7 +47,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
+      <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center gap-smaller'>
         {Piramid_One.map((image, index) => (
           <SkillDataProvider
             key={index}

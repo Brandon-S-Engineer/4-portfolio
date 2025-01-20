@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  width: 100vw !important;
+  overflow-x: hidden;
+}
+
 .cursive {
   font-family: 'Cedarville Cursive', cursive;
 }
@@ -122,4 +128,73 @@ html {
 /* Add this to your global CSS or Tailwind CSS custom layer */
 .text-stroke {
   // -webkit-text-stroke: 1px #0d0918; /* Customize color and thickness */
+}
+
+@media (max-width: 479px) {
+  .hidden-until-480 {
+    display: none !important;
+  }
+
+  .text-until-480 {
+    font-size: 18px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  .text-smaller {
+    font-size: 21px;
+  }
+
+  .text-smaller-2 {
+    font-size: 28px !important;
+  }
+
+  .title-text {
+    font-size: 50px;
+  }
+
+  .gap-smaller {
+    gap: 0.6rem;
+  }
+
+  .no-rounded-xs {
+    border-radius: 0 !important;
+  }
+
+  .decrease-px {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .hidden-until-639 {
+    display: none !important;
+  }
+
+  .text-until-639 {
+    font-size: 18px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  .text-smaller {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hidden-until-1023 {
+    display: none !important;
+  }
+
+  .text-until-1023 {
+    font-size: 18px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  .text-smaller {
+    font-size: 21px;
+  }
 }

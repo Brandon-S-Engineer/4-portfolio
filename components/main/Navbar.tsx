@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10'>
+    <div className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 md:px-10'>
       <div className='w-full h-full flex flex-row items-center justify-between m-auto px-[10px]'>
         <a
           href='#hero'
@@ -43,17 +43,18 @@ const Navbar = () => {
           <span className='font-bold ml-[10px] hidden xl:block text-gray-300'>Brandon I. Soria</span>
         </a>
 
-        <div className='w-[750px] h-full flex flex-row items-center justify-between '>
+        <div className='w-full sm:w-full md:w-[750px] h-full flex flex-row items-center justify-between '>
           <div className='flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#03001480] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200'>
             <a
               onClick={() => handleNavbarClick('hero')}
               className='cursor-pointer hover:text-blue-500 transition-colors'>
-              About me
+              <span className='hidden sm:block'>About me</span>
+              <span className='sm:hidden'>Home</span>
             </a>
 
             <a
               onClick={() => handleNavbarClick('skills')}
-              className='cursor-pointer hover:text-blue-500 transition-colors'>
+              className='cursor-pointer hover:text-blue-500 transition-colors hidden-until-480'>
               Skills
             </a>
 
@@ -64,14 +65,16 @@ const Navbar = () => {
 
             <a
               onClick={() => handleNavbarClick('ai-proficencies')}
-              className='cursor-pointer hover:text-blue-500 transition-colors'>
-              AI <span className='hidden xl:inline'>Knowledge</span>
+              className='cursor-pointer hover:text-blue-500 transition-colors hidden sm:block'>
+              <span>AI</span>
+              <span className='hidden xl:inline'> Knowledge</span>
             </a>
 
             <a
               onClick={() => handleNavbarClick('projects')}
               className='cursor-pointer hover:text-blue-500 transition-colors'>
-              <span className='lg:hidden'>Webs</span> <span className='hidden lg:block'>Website Showcase</span>
+              <span className='lg:hidden'>Webs</span>
+              <span className='hidden lg:block'>Website Showcase</span>
             </a>
 
             <a
@@ -87,7 +90,7 @@ const Navbar = () => {
             href='https://github.com/Brandon-S-Engineer?tab=repositories&q=&type=&language=&sort=name'
             target='_blank'
             rel='noopener noreferrer'
-            className='text-white hover:text-blue-500 transition-colors'>
+            className='text-white hover:text-blue-500 transition-colors hidden-until-480'>
             <RxGithubLogo
               // color='white'
               className='text-[15px] size-8'
@@ -106,7 +109,7 @@ const Navbar = () => {
             href='mailto:brandon.s.engineer@gmail.com'
             target='_blank'
             rel='noopener noreferrer'
-            className='text-white hover:text-blue-500 transition-colors'>
+            className='text-white hover:text-blue-500 transition-colors hidden md:block'>
             <RxEnvelopeClosed className='text-[15px] size-8' />
           </a>
 
@@ -114,7 +117,7 @@ const Navbar = () => {
             href='/0-resume/Resume-Brandon-I-Soria.pdf'
             target='_blank'
             rel='noopener noreferrer'
-            className='text-white hover:text-blue-500 transition-colors'>
+            className='text-white hover:text-blue-500 transition-colors hidden md:block'>
             <RxIdCard className='text-[15px] size-8' />
           </a>
         </div>

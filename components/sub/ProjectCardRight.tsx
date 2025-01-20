@@ -10,7 +10,7 @@ interface Props {
 
 const ProjectCardRight = ({ src, title, description, isDark }: Props) => {
   return (
-    <div className='grid grid-cols-2 overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] max-w-3xl mx-auto mb-3'>
+    <div className='grid grid-cols-2 overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] md:max-w-[95%] lg:max-w-3xl mx-auto mb-3'>
       {/* Image Section */}
       <div className='relative'>
         <Image
@@ -30,9 +30,9 @@ const ProjectCardRight = ({ src, title, description, isDark }: Props) => {
       {/* Text Section */}
       <div className='relative p-4 flex flex-col justify-start items-center'>
         {/* Title */}
-        <h1 className='text-2xl font-semibold text-white text-center'>{title}</h1>
+        <h1 className='text-2xl font-semibold text-white text-center text-smaller-2'>{title}</h1>
         {/* Description */}
-        <p className='text-gray-300 mb-2 text-center'>{description}</p>
+        <p className='text-gray-300 mb-2 text-center hidden sm:block'>{description}</p>
       </div>
     </div>
   );

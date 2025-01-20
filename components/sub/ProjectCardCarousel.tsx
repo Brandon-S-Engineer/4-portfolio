@@ -74,7 +74,7 @@ const ProjectCardCarousel = ({ images, title, technologies, description, isDark,
   const textHeight = windowWidth * 0.2; // 40% of the window width for text section height
 
   return (
-    <div className='md:flex md:flex-col lg:grid lg:grid-cols-[65%_35%] overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] md:w-[95%] lg:max-w-3xl xl:w-[80%] mx-auto md:mb-16 lg:mb-8 relative'>
+    <div className='md:flex md:flex-col lg:grid lg:grid-cols-[65%_35%] overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] w-[95%] lg:max-w-4xl mx-auto mb-16 lg:mb-8 relative'>
       {/* Image Section */}
       <div className='relative'>
         <div className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
@@ -151,7 +151,7 @@ const ProjectCardCarousel = ({ images, title, technologies, description, isDark,
 
         {/* Description */}
         <div
-          className='custom-scrollbar overflow-y-auto'
+          className='custom-scrollbar overflow-y-auto mb-0 sm:mb-0'
           style={{ height: textHeight, paddingRight: '7px' }}>
           {/* Now adjust it with media queries lg: md: etc */}
           <p className='text-gray-300 mb-2 text-left'>{description}</p>

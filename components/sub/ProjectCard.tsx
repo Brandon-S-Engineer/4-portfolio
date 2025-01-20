@@ -24,8 +24,8 @@ const ProjectCard = ({ src, title, description, isDark }: Props) => {
       </div>
 
       <div className='relative p-4'>
-        <h1 className='text-2xl font-semibold text-white'>{title}</h1>
-        <p className='mt-2 text-gray-300'>{description}</p>
+        <h1 className='text-2xl font-semibold text-white text-center lg:text-start'>{title}</h1>
+        <p className='mt-2 text-gray-300 hidden lg:block'>{description}</p>
       </div>
     </div>
   );
