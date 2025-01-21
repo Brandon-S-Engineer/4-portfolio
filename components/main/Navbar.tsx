@@ -37,7 +37,7 @@ const Navbar = () => {
             alt='Logo'
             width={70}
             height={70}
-            className='hidden lg:block cursoir-pointer hover:animate-slowspin'
+            className='hidden lg:block cursor-pointer'
           />
 
           <span className='font-bold ml-[10px] hidden xl:block text-gray-300'>Brandon I. Soria</span>
