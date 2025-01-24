@@ -25,7 +25,7 @@ const Projects = () => {
         webLink='https://1-restaurant.vercel.app/'
         repoLink='https://github.com/Brandon-S-Engineer/1-restaurant'
         technologies='JavaScript, SCSS, Animations.'
-        description={formattedDescription1}
+        descriptionKey='formattedDescription1'
       />
 
       <ProjectCardCarousel
@@ -38,7 +38,7 @@ const Projects = () => {
         webLink='https://2-ai-image-web.vercel.app/'
         repoLink='https://github.com/Brandon-S-Engineer/2-ai-image-web'
         technologies='Tailwind, React, API, MERN'
-        description={formattedDescription2}
+        descriptionKey='formattedDescription2'
         isDark
       />
 
@@ -54,7 +54,7 @@ const Projects = () => {
         webLink='https://3-social-media-z7ma.vercel.app/'
         repoLink='https://github.com/Brandon-S-Engineer/3-social-media'
         technologies='MUI, React, MERN'
-        description={formattedDescription3}
+        descriptionKey='formattedDescription3'
         isDark
       />
 
@@ -70,7 +70,7 @@ const Projects = () => {
         webLink='https://brandon-s-engineer.com/'
         repoLink='https://github.com/Brandon-S-Engineer/4-portfolio'
         technologies='TypeScript, NextJS'
-        description={formattedDescription4}
+        descriptionKey='formattedDescription4'
       />
 
       <ProjectCardCarousel
@@ -94,7 +94,7 @@ const Projects = () => {
         webLink='https://ecommerce-frontend-tau-one.vercel.app/'
         repoLink='https://github.com/Brandon-S-Engineer/ecommerce-frontend'
         technologies='Tailwind, ShadCN, TypeScript, NextJS, MERN, Stripe'
-        description={formattedDescription5}
+        descriptionKey='formattedDescription5'
         isDark
       />
     </div>
