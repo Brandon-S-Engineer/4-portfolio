@@ -66,7 +66,7 @@ const ProjectCardCarousel = ({ images, title, technologies, descriptionKey, isDa
   };
 
   return (
-    <div className='md:flex md:flex-col lg:grid lg:grid-cols-[65%_35%] overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] w-[95%] lg:max-w-4xl mx-auto mb-16 lg:mb-8 relative lg:h-[332px]'>
+    <div className='flex flex-col overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] w-[95%] sm:w-[90%] md:w-[80%] lg:w-[45%] lg:mx-[1%] mb-16 lg:mb-8 relative'>
       {/* Image Section */}
       <div className='relative pb-8'>
         <div className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
