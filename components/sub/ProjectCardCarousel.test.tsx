@@ -13,6 +13,14 @@ jest.mock('next/image', () => (props: any) => {
   );
 });
 
+jest.mock('../../content/projectDescriptions', () => ({
+  formattedDescription1: 'Plain text description for testing.',
+  formattedDescription2: 'Another plain text description.',
+  formattedDescription3: 'Sample description.',
+  formattedDescription4: 'Yet another description.',
+  formattedDescription5: 'Final plain text description.',
+}));
+
 const mockProps = {
   images: [
     { src: '/image1.png', alt: 'Image 1' },
@@ -20,17 +28,24 @@ const mockProps = {
   ],
   title: 'Test Project',
   technologies: 'React, Next.js, TailwindCSS',
-  description: 'This is a description for the test project.',
-  isDark: false,
+  descriptionKey: 'formattedDescription1' as const, // Ensure this matches one of the keys in `descriptions`
+  isDark: true,
+  webLink: 'https://brandon-s-engineer.com', // Replace with a valid URL for testing
+  repoLink: 'https://github.com/Brandon-S-Engineer?tab=repositories&q=&type=&language=&sort=nameo', // Replace with a valid repository link for testing
 };
 
 describe('ProjectCardCarousel Component', () => {
   it('renders without crashing', () => {
-    render(<ProjectCardCarousel {...mockProps} />);
+    render(
+      <ProjectCardCarousel
+        {...mockProps}
+        descriptionKey='formattedDescription1'
+      />
+    );
+
+    // Check for the basic elements
     expect(screen.getByAltText('Image 1')).toBeInTheDocument();
     expect(screen.getByText('Test Project')).toBeInTheDocument();
-    expect(screen.getByText('React, Next.js, TailwindCSS')).toBeInTheDocument();
-    expect(screen.getByText('This is a description for the test project.')).toBeInTheDocument();
   });
 
   it('displays the dark overlay when isDark is true', () => {

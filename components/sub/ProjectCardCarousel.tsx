@@ -133,7 +133,9 @@ const ProjectCardCarousel = ({ images, title, technologies, descriptionKey, isDa
 
         <p className='text-gray-300 mb-2 text-left'>{technologies}</p>
 
-        <div className='custom-scrollbar overflow-y-auto w-full max-h-[calc(332px-72px)]'>
+        <div
+          className='custom-scrollbar overflow-y-auto w-full max-h-[calc(332px-72px)]'
+          aria-label='project description'>
           <p className='text-gray-300 mb-2 text-left'>{description}</p>
         </div>
       </div>
