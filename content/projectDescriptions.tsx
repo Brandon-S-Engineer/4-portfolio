@@ -33,7 +33,7 @@ export const formattedDescription3 = (
   <div className='formatted-description'>
     <p>
       Built a dynamic social media application using the <strong>MERN stack</strong>, featuring user-friendly navigation and an engaging interface designed with <strong>React</strong> and <strong>Material UI (MUI)</strong>. This project highlights my ability to create polished, interactive user
-      experiences with modern Front-End technologies.
+      experiences with modern Full-Stack technologies.
     </p>
     <br />
     <p>

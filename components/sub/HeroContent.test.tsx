@@ -33,10 +33,10 @@ describe('HeroContent Component', () => {
     render(<HeroContent />);
 
     // Use partial matchers for dynamic text
-    expect(screen.getByText(/Front-End Software Engineer/i)).toBeInTheDocument();
+    expect(screen.getByText(/Full-Stack Software Engineer/i)).toBeInTheDocument();
     expect(screen.getByText(/Dynamic and Adaptative/i)).toBeInTheDocument();
     expect(screen.getByText(/Creating/i)).toBeInTheDocument();
-    expect(screen.getByText(/Front-End Solutions/i)).toBeInTheDocument();
+    expect(screen.getByText(/Full-Stack Solutions/i)).toBeInTheDocument();
 
     // Verify additional elements
     expect(screen.getByText(/I'm Brandon Israel Hurtado Soria/i)).toBeInTheDocument();
@@ -76,7 +76,7 @@ describe('HeroContent Component', () => {
     render(<HeroContent />);
 
     // Check for the welcome box motion container
-    const welcomeBox = screen.getByText(/Front-End Software Engineer/i).closest('div');
+    const welcomeBox = screen.getByText(/Full-Stack Software Engineer/i).closest('div');
     expect(welcomeBox).toBeInTheDocument();
     expect(welcomeBox).toHaveClass('Welcome-box');
 
