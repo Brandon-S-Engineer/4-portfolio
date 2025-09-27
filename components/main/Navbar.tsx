@@ -58,23 +58,25 @@ const Navbar = () => {
               Skills
             </a>
 
-            {/* <a
+            <a
+              onClick={() => handleNavbarClick('freelance')}
               className='cursor-pointer hover:text-blue-500 transition-colors'>
-              Certifications
-            </a> */}
+              <span className='lg:hidden'>Webs</span>
+              <span className='hidden lg:block'>Website Showcase</span>
+            </a>
+
+            <a
+              onClick={() => handleNavbarClick('projects')}
+              className='cursor-pointer hover:text-blue-500 transition-colors'>
+              <span className='lg:hidden'>Projects</span>
+              <span className='hidden lg:block'>Projects</span>
+            </a>
 
             <a
               onClick={() => handleNavbarClick('ai-proficencies')}
               className='cursor-pointer hover:text-blue-500 transition-colors hidden sm:block'>
               <span>AI</span>
               <span className='hidden xl:inline'> Knowledge</span>
-            </a>
-
-            <a
-              onClick={() => handleNavbarClick('projects')}
-              className='cursor-pointer hover:text-blue-500 transition-colors'>
-              <span className='lg:hidden'>Webs</span>
-              <span className='hidden lg:block'>Website Showcase</span>
             </a>
 
             <a

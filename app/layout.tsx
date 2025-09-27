@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Brandon I. Soria | Portfolio',
-  description: 'Portfolio of Brandon I. Soria, showcasing expertise in front-end development, React, Next.js, and modern web technologies.',
+  description: 'Portfolio of Brandon I. Soria, showcasing expertise Full-Stack development, React, Next.js, and modern web technologies.',
 };
 
 export default function RootLayout({

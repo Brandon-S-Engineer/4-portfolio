@@ -8,7 +8,7 @@ const Projects = () => {
     <div
       className='flex flex-col items-center justify-center py-10 z-40'
       id='projects'>
-      <h1 className='text-[70px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-6 text-center title-text'>Website Showcase</h1>
+      <h1 className='text-[70px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-6 text-center title-text'>Personal Projects</h1>
       <div className='flex flex-wrap justify-center w-full gap-y-8'>
         <ProjectCardCarousel
           images={[
@@ -68,30 +68,6 @@ const Projects = () => {
           repoLink='https://github.com/Brandon-S-Engineer/4-portfolio'
           technologies='TypeScript, NextJS'
           descriptionKey='formattedDescription4'
-        />
-        <ProjectCardCarousel
-          images={[
-            { src: '/5-eCommerce/1.png', alt: 'Description' },
-            { src: '/5-eCommerce/2.png', alt: 'Description' },
-            { src: '/5-eCommerce/3.png', alt: 'Description' },
-            { src: '/5-eCommerce/4.png', alt: 'Description' },
-            { src: '/5-eCommerce/5.png', alt: 'Description' },
-            { src: '/5-eCommerce/6.png', alt: 'Description' },
-            { src: '/5-eCommerce/7.png', alt: 'Description' },
-            { src: '/5-eCommerce/8.png', alt: 'Description' },
-            { src: '/5-eCommerce/9.png', alt: 'Description' },
-            { src: '/5-eCommerce/10.png', alt: 'Description' },
-            { src: '/5-eCommerce/11.png', alt: 'Description' },
-            { src: '/5-eCommerce/12.png', alt: 'Description' },
-            { src: '/5-eCommerce/13.png', alt: 'Description' },
-            { src: '/5-eCommerce/14.png', alt: 'Description' },
-          ]}
-          title='eCommerce & Admin Panel'
-          webLink='https://ecommerce-frontend-tau-one.vercel.app/'
-          repoLink='https://github.com/Brandon-S-Engineer/ecommerce-frontend'
-          technologies='Tailwind, ShadCN, TypeScript, NextJS, MERN, Stripe'
-          descriptionKey='formattedDescription5'
-          isDark
         />
       </div>
     </div>

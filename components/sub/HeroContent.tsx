@@ -25,13 +25,13 @@ const HeroContent = () => {
     <motion.div
       initial='hidden'
       animate='visible'
-      className='flex flex-row items-center justify-center lg:px-20 mt-40 w-full z-[20]'>
+      className='flex flex-row items-center justify-center lg:px-20 mt-48 w-full z-[20]'>
       <div className='h-full w-full lg:w-[60%] flex flex-col gap-5 m-auto justify-center items-center lg:items-start lg:text-start text-center'>
         <motion.div
           variants={slideInFromTop}
           className='Welcome-box font-bold py-[8px] px-[9px] border border-[#7042f88b] opacity-[0.9]'>
           <SparklesIcon className='text-[#b49bff] mr-[10px] h-5 w-5'></SparklesIcon>
-          <h1 className='text-white text-[26px] text-smaller drop-shadow-[0_1px_1px_rgba(0,0,0,1)]'>Front-End Software Engineer</h1>
+          <h1 className='text-white text-[26px] text-smaller drop-shadow-[0_1px_1px_rgba(0,0,0,1)]'>Full-Stack Software Engineer</h1>
         </motion.div>
 
         <motion.div
@@ -40,14 +40,14 @@ const HeroContent = () => {
           <span>
             Creating
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500'> Dynamic and Adaptative </span>
-            Front-End Solutions
+            Full-Stack Solutions
           </span>
         </motion.div>
 
         <motion.p
           variants={slideInFromLeft(0.8)}
           className='text-lg text-blue-100 my-5 max-w-[600px]'>
-          I'm Brandon Israel Hurtado Soria, a Front-End Developer specializing in building responsive and user-friendly web applications with modern technologies like React, Next.js, and TypeScript. <br />
+          I'm Brandon Israel Hurtado Soria, a Full-Stack Developer specializing in building responsive and user-friendly web applications with modern technologies like React, Next.js, and TypeScript. <br />
         </motion.p>
 
         <div className='flex justify-start space-x-4'>

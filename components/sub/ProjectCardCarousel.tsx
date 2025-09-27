@@ -1,9 +1,14 @@
 'use client';
 
-import { formattedDescription1, formattedDescription2, formattedDescription3, formattedDescription4, formattedDescription5 } from '@/content/projectDescriptions';
+import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import { RxExternalLink, RxGithubLogo } from 'react-icons/rx';
+import useEmblaCarousel from 'embla-carousel-react';
+import { RxExternalLink, RxGithubLogo, RxChevronLeft, RxChevronRight } from 'react-icons/rx';
+
+import { formattedDescription1, formattedDescription2, formattedDescription3, formattedDescription4, formattedDescription5 } from '@/content/projectDescriptions';
+
+// If you added the freelance ones, import & merge here too:
+import { freelanceDescription1, freelanceDescription2, freelanceDescription3 } from '@/content/freelanceDescriptions';
 
 interface Props {
   images: { src: string; alt: string }[];
@@ -21,126 +26,126 @@ const descriptions = {
   formattedDescription3,
   formattedDescription4,
   formattedDescription5,
+  freelanceDescription1,
+  freelanceDescription2,
+  freelanceDescription3,
 } as const;
 
 type DescriptionKey = keyof typeof descriptions;
 
-const ProjectCardCarousel = ({ images, title, technologies, descriptionKey, isDark, webLink, repoLink }: Props) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [fade, setFade] = useState(true);
-  const [description, setDescription] = useState<React.ReactNode | null>(null);
+export default function ProjectCardCarousel({ images, title, technologies, descriptionKey, isDark, webLink, repoLink }: Props) {
+  const [emblaRef, embla] = useEmblaCarousel({ loop: true, align: 'start', skipSnaps: false });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const description = descriptions[descriptionKey];
+
+  const onSelect = useCallback(() => {
+    if (!embla) return;
+    setSelectedIndex(embla.selectedScrollSnap());
+  }, [embla]);
 
   useEffect(() => {
-    setDescription(descriptions[descriptionKey]);
-  }, [descriptionKey]);
+    if (!embla) return;
+    onSelect();
+    embla.on('select', onSelect);
+  }, [embla, onSelect]);
 
-  if (!description) {
-    return <div>Loading...</div>;
-  }
-
-  // 1) Guard window usage
-  const preloadImage = (index: number) => {
-    if (typeof window === 'undefined') return;
-    const image = new window.Image();
-    image.src = images[index].src;
-  };
-
-  const handlePrevClick = () => {
-    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-    preloadImage(newIndex);
-    setCurrentIndex(newIndex);
-  };
-
-  const handleNextClick = () => {
-    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-    preloadImage(newIndex);
-    setCurrentIndex(newIndex);
-  };
-
-  const handleDotClick = (index: number) => {
-    setFade(false);
-    setTimeout(() => {
-      setCurrentIndex(index);
-      setFade(true);
-    }, 262);
-  };
+  const scrollPrev = () => embla?.scrollPrev();
+  const scrollNext = () => embla?.scrollNext();
+  const scrollTo = (i: number) => embla?.scrollTo(i);
 
   return (
     <div className='flex flex-col overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] w-[95%] sm:w-[90%] md:w-[80%] lg:w-[45%] lg:mx-[1%] mb-16 lg:mb-8 relative'>
       {/* Image Section */}
-      <div className='relative pb-8'>
-        <div className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
-          <Image
-            src={images[currentIndex].src}
-            alt={images[currentIndex].alt}
-            width={630}
-            height={630}
-            className='object-cover w-full h-full'
-            loading='eager'
-          />
+      <div className='relative'>
+        <div
+          className='overflow-hidden'
+          ref={emblaRef}>
+          <div className='flex'>
+            {images.map((img, i) => (
+              <div
+                key={i}
+                className='min-w-0 flex-[0_0_100%] relative'>
+                {/* Maintain aspect ratio for CLS-free layout */}
+                <div
+                  className='relative w-full'
+                  style={{ aspectRatio: '16/9' }}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className='object-cover'
+                    // First slide: priority, others lazy
+                    priority={i === 0}
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                    // Make mobile fetch small variants
+                    sizes='(max-width: 640px) 90vw, (max-width: 1024px) 80vw, 45vw'
+                  />
+                  {isDark && <div className='absolute inset-0 bg-black/30 pointer-events-none' />}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {isDark && (
-          <div
-            data-testid='dark-overlay'
-            className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-30'></div>
-        )}
-
-        {/* Carousel Navigation */}
         <button
-          onClick={handlePrevClick}
-          className='absolute top-2/3 left-3 transform bg-white bg-opacity-80 rounded-full flex items-center justify-center w-8 h-8 text-lg leading-none'>
-          <div className='flex items-center justify-center w-full h-full mt-[1px] mr-[3px]'>◀</div>
+          type='button'
+          onClick={scrollPrev}
+          aria-label='Previous image'
+          className='absolute top-1/2 -translate-y-1/2 left-3 w-10 h-10 flex items-center justify-center rounded-full bg-gray-600/80 text-white hover:bg-gray-700/90 shadow-md'>
+          <RxChevronLeft className='w-5 h-5' />
         </button>
         <button
-          onClick={handleNextClick}
-          className='absolute top-2/3 right-3 transform bg-white bg-opacity-80 rounded-full flex items-center justify-center w-8 h-8 text-lg leading-none'>
-          <div className='flex items-center justify-center w-full h-full mt-[1px] ml-[4px]'>▶</div>
+          type='button'
+          onClick={scrollNext}
+          aria-label='Next image'
+          className='absolute top-1/2 -translate-y-1/2 right-3 w-10 h-10 flex items-center justify-center rounded-full bg-gray-600/80 text-white hover:bg-gray-700/90 shadow-md'>
+          <RxChevronRight className='w-5 h-5' />
         </button>
 
-        {/* Pagination Dots */}
-        <div className='absolute bottom-12 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-60'>
-          {images.map((_, index) => (
+        {/* Dots */}
+        <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2'>
+          {images.map((_, i) => (
             <button
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className={`w-2 h-2 rounded-full ${index === currentIndex ? 'bg-white' : 'bg-gray-700'}`}
-              aria-label={`Go to image ${index + 1}`}
+              key={i}
+              onClick={() => scrollTo(i)}
+              aria-label={`Go to image ${i + 1}`}
+              className={`rounded-full w-2.5 h-2.5 ${i === selectedIndex ? 'bg-white' : 'bg-white/40'}`}
             />
           ))}
         </div>
       </div>
 
+      {/* Removed the old controls container */}
+
       {/* Text Section */}
       <div className='p-4 flex flex-col items-center h-full overflow-hidden'>
-        <h1 className='text-2xl font-semibold text-white text-center flex items-center justify-center space-x-1'>
+        <h1 className='text-2xl font-semibold text-white text-center flex items-center justify-center'>
           {title}
           <a
             href={webLink}
             target='_blank'
             rel='noopener noreferrer'
-            className='ml-1 cursor-pointer'>
+            className='ml-1'>
             <RxExternalLink className='hover:text-blue-500 transition-colors' />
           </a>
           <a
             href={repoLink}
             target='_blank'
             rel='noopener noreferrer'
-            className='ml-1 cursor-pointer'>
+            className='ml-1'>
             <RxGithubLogo className='hover:text-blue-500 transition-colors' />
           </a>
         </h1>
 
         <p className='text-gray-300 mb-2 text-left'>{technologies}</p>
 
+        {/* Render the ReactNode directly */}
         <div
           className='custom-scrollbar overflow-y-auto w-full max-h-[calc(332px-72px)]'
           aria-label='project description'>
-          <p className='text-gray-300 mb-2 text-left'>{description}</p>
+          <div className='text-gray-300 mb-2 text-left'>{description}</div>
         </div>
       </div>
     </div>
   );
-};
-
-export default ProjectCardCarousel;
+}

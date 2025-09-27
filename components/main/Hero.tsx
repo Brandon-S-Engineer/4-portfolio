@@ -10,11 +10,8 @@ const Hero = () => {
         autoPlay
         muted
         loop
-        className='rotate-180 absolute top-[-340px] left-0 z-[1] w-full h-full object-cover'>
-        <source
-          src='ccc.mov'
-          type='video/webm'
-        />
+        className='rotate-180 absolute top-[-206px] left-0 z-[1] w-full h-full object-cover'>
+        <source src='ccc.mov' />
       </video>
 
       <HeroContent></HeroContent>
